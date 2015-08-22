@@ -8,7 +8,7 @@ def factors(n):
 
 	return factors
 
-"""https://projecteuler.net/problem="""
+"""https://projecteuler.net/problem=12"""
 if __name__ == '__main__':
 	total = 0
 	n = 0
