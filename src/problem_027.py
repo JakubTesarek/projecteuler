@@ -3,7 +3,7 @@
 from problem_010 import primes
 from problem_003 import is_prime
 
-"""https://projecteuler.net/problem="""
+"""https://projecteuler.net/problem=27"""
 if __name__ == '__main__':
 	
 	generator_product = None
@@ -14,10 +14,9 @@ if __name__ == '__main__':
 			n = 0
 			primes_generated = 0
 			while True:
-				product = (n ** 2) + (a * n) + b
-				if not is_prime(product):
+				if not is_prime((n ** 2) + (a * n) + b):
 					break
-				
+
 				primes_generated += 1
 				n += 1
 			
