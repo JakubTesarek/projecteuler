@@ -77,3 +77,7 @@ def collatz_len(num, seq = {}):
 			seq[num] = 1
 
 	return seq[num]
+
+
+def is_pandigital(num):
+	return not cmp(sorted(digits(num)), range(1, len(str(num)) + 1))
