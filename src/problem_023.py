@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 
-from problem_021 import proper_factors
+from math_tools import proper_factors
+
 
 """https://projecteuler.net/problem=23"""
 if __name__ == '__main__':

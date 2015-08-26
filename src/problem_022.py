@@ -2,6 +2,7 @@
 
 import csv
 
+
 """https://projecteuler.net/problem=22"""
 if __name__ == '__main__':
 	with open("fixtures/problem_022.txt", "r") as fixture:

@@ -10,12 +10,14 @@ def number_of_days(month, year):
 	else:
 		return 28
 
+
 def next_month(month, year):
 	month = month % 12 + 1
 	if month == 1:
 		year += 1
 
 	return month, year
+
 
 """https://projecteuler.net/problem=19"""
 if __name__ == '__main__':

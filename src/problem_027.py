@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-from problem_010 import primes
-from problem_003 import is_prime
+from math_tools import is_prime, primes
 
 """https://projecteuler.net/problem=27"""
 if __name__ == '__main__':

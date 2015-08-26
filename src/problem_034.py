@@ -1,15 +1,7 @@
 #!/usr/bin/env python
 
-from problem_030 import digits
+from math_tools import factorial, digits
 
-def factorial(num, cache = {}):
-	if num not in cache:
-		factorial = 1
-		for n in range(1, num + 1):
-			factorial *= n
-		cache[num] = factorial
-
-	return cache[num]
 
 """https://projecteuler.net/problem=34"""
 if __name__ == '__main__':

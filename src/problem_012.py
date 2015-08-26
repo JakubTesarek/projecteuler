@@ -1,12 +1,7 @@
 #!/usr/bin/env python
 
-def factors(n):
-	factors = set([f for f in range(1, int(n ** 0.5) + 1) if n%f == 0])
+from math_tools import factors
 
-	for f in set(factors):
-		factors.add(n / f)
-
-	return factors
 
 """https://projecteuler.net/problem=12"""
 if __name__ == '__main__':

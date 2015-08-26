@@ -1,26 +1,9 @@
 #!/usr/bin/env python
 
-def next_collatz_number(n):
-	if n == 1:
-		return None
-	if n % 2 == 0:
-		return n / 2
-	else:
-		return 3 * n + 1
+from math_tools import collatz_len
 
 
-def collatz_len(n, seq = {}):
-	if n not in seq:
-		next_collatz = next_collatz_number(n)
-		if next_collatz is not None:
-			seq[n] = 1 + collatz_len(next_collatz, seq)
-		else:
-			seq[n] = 1
-
-	return seq[n]
-
-
-"""https://projecteuler.net/problem="""
+"""https://projecteuler.net/problem=14"""
 if __name__ == '__main__':
 	seq = {}
 

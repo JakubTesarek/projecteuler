@@ -1,13 +1,6 @@
 #!/usr/bin/env python
 
-def digits(num):
-	digits = []
-
-	while num:
-		digits.append(num % 10)
-		num /= 10
-
-	return digits[::-1]
+from math_tools import digits
 
 
 """https://projecteuler.net/problem=30"""

@@ -1,10 +1,6 @@
 #!/usr/bin/env python
 
-from itertools import count, islice
-
-def is_prime(n):
-	if n < 2: return False
-	return all(n % i for i in islice(count(start=2), int(n ** 0.5 - 1)))
+from math_tools import is_prime
 
 
 """https://projecteuler.net/problem=3"""

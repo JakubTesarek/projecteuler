@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-"""https://projecteuler.net/problem=16"""
+"""https://projecteuler.net/problem=15"""
 if __name__ == '__main__':
 	# it can also be calculated using simple formula (https://en.wikipedia.org/wiki/Lattice_path) but this is more fun
 	

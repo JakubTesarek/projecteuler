@@ -9,6 +9,7 @@ def row_count(graph):
 			return row + 1
 		row += 1
 
+
 def get_num(row, column, graph):
 	chars = 0
 	for i in range(0, row):
@@ -18,11 +19,14 @@ def get_num(row, column, graph):
 
 	return int(graph[chars:chars+2])
 
+
 def numbers_in_row(row):
 	return row + 1
 
+
 def chars_in_row(row):
 	return 3 * numbers_in_row(row)
+
 
 def find_max_path_value(graph):
 	node_values = {}
