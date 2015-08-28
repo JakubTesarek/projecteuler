@@ -37,23 +37,6 @@ def factors(num):
 	return factors
 
 
-def primes(max):
-	exclude = set()
-	primes = []
-
-	x = 2
-	while x < max + 1:
-		if x not in exclude:
-			primes.append(x)
-			i = x
-			while i < max + 1:
-				exclude.add(i)
-				i += x
-		x += 1
-
-	return primes
-
-
 def is_prime(num):
 	if num < 2: return False
 	return all(num % i for i in islice(count(start=2), int(num ** 0.5 - 1)))
