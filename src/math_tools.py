@@ -110,3 +110,21 @@ def primes(max_prime=-1):
             del sieve[num]
 
         num += 1
+
+
+def triagle_numbers(start=1):
+	while True:
+		yield start * (start + 1) / 2
+		start += 1
+
+
+def pentagonal_numbers(start=1):
+	while True:
+		yield start * (3 * start - 1) / 2
+		start += 1
+
+
+def hexagonal_numbers(start=1):
+	while True:
+		yield start * (2 * start - 1)
+		start += 1
