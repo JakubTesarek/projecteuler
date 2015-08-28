@@ -66,15 +66,17 @@ def is_pandigital(num):
 	return not cmp(sorted(digits(num)), range(1, len(str(num)) + 1))
 
 
-def permutations(permutation):
-	permutation.sort()
+def permutations(permutation, reset=True):
+	if reset:
+		permutation.sort()
 	max_index = len(permutation) - 1
 
 	done = False
+
 	while not done:
+		yield permutation
 		done = True
 		for k in range(max_index, -1, -1):
-			yield permutation
 	 		if k + 1 <= max_index and permutation[k] < permutation[k + 1]:
 	 			done = False
 	   			for s in range(max_index, k, -1):	
