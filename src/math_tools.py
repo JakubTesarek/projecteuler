@@ -81,3 +81,27 @@ def collatz_len(num, seq = {}):
 
 def is_pandigital(num):
 	return not cmp(sorted(digits(num)), range(1, len(str(num)) + 1))
+
+
+def permutations(permutation):
+	permutation.sort()
+	max_index = len(permutation) - 1
+
+	done = False
+	while not done:
+		done = True
+		for k in range(max_index, -1, -1):
+			yield permutation
+	 		if k + 1 <= max_index and permutation[k] < permutation[k + 1]:
+	 			done = False
+	   			for s in range(max_index, k, -1):	
+	   				if permutation[k] < permutation[s]:
+	   					permutation[k], permutation[s] = permutation[s], permutation[k]	
+	   					permutation[k + 1:] = permutation[:k:-1]
+	   					break
+	   			break
+
+def rotations(permutation):
+	for i in range(len(permutation)):
+		yield permutation
+		permutation.append(permutation.pop(0))

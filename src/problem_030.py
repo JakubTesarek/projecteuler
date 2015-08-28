@@ -11,7 +11,3 @@ if __name__ == '__main__':
 			result += n
 
 	print(result)
-
-
-
-	
