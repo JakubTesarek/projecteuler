@@ -101,7 +101,27 @@ def permutations(permutation):
 	   					break
 	   			break
 
+
 def rotations(permutation):
 	for i in range(len(permutation)):
 		yield permutation
 		permutation.append(permutation.pop(0))
+
+
+def primes(max_prime=-1):
+    sieve = {}  
+    num = 2  
+
+    while True:
+    	if max_prime != -1 and num >= max_prime:
+    		break
+
+        if num not in sieve:
+            yield num        
+            sieve[num * num] = [num]
+        else:
+            for p in sieve[num]:
+                sieve.setdefault(p + num, []).append(p)
+            del sieve[num]
+
+        num += 1
