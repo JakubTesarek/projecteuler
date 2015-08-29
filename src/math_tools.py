@@ -113,19 +113,35 @@ def primes(max_prime=-1):
         num += 1
 
 
+def triangle_number(k):
+	return k * (k + 1) / 2
+
+
 def triagle_numbers(start=1):
 	while True:
-		yield start * (start + 1) / 2
+		yield triangle_number(start)
 		start += 1
+
+
+def pentagonal_number(k):
+	return k * (3 * k - 1) / 2
 
 
 def pentagonal_numbers(start=1):
 	while True:
-		yield start * (3 * start - 1) / 2
+		yield pentagonal_number(start)
 		start += 1
+
+
+def is_pentagonal_number(num):
+	return ((24 * num + 1) ** 0.5 + 1) % 6 == 0
+
+
+def hexagonal_number(k):
+	return k * (2 * k - 1)
 
 
 def hexagonal_numbers(start=1):
 	while True:
-		yield start * (2 * start - 1)
+		yield hexagonal_number(start)
 		start += 1
