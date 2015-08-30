@@ -2,12 +2,15 @@ from itertools import count, islice
 
 
 def factorial(num, cache = {}):
-	if num not in cache:
-		factorial = 1
-		for n in range(1, num + 1):
-			factorial *= n
-		cache[num] = factorial
+	factorial = 1
+	for n in range(num, 0, -1):
+		if n in cache:
+			factorial *= cache[n]
+			break
 
+		factorial *= n
+
+	cache[num] = factorial
 	return cache[num]
 
 
@@ -145,3 +148,7 @@ def hexagonal_numbers(start=1):
 	while True:
 		yield hexagonal_number(start)
 		start += 1
+
+
+def selections_count(n, r):
+	return factorial(n) / (factorial(r) * factorial(n - r))
